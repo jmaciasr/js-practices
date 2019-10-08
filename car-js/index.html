@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Class 2</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="car__container">
+    <ul class="car__states__list">
+      <li class="car__states__item car__states__start" id="engine"></li>
+      <li class="car__states__item car__states__doors" id="doors"></li>
+      <li class="car__states__item car__states__back" id="back"></li>
+      <li class="car__states__item car__states__roof" id="roof"></li>
+      <li class="car__states__item car__states__front" id="front"></li>
+    </ul>
+    <div class="car__holder">
+      <div class="car__control" id="control">
+        <button class="car__control__btn" id="controlBlock"></button>
+        <button class="car__control__btn" id="controlBack"></button>
+        <button class="car__control__btn" id="controlUnblock"></button>
+      </div>
+      <div class="car__display" id="car">
+        <button class="pulse__btn door" data-part="door" id="doorBtn"></button>
+        <button class="pulse__btn back" data-part="back" id="backBtn"></button>
+        <button class="pulse__btn front" data-part="front" id="frontBtn"></button>
+        <button class="pulse__btn roof" data-part="roof" id="roofBtn"></button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>
