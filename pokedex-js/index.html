@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Class</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="pkmn__main__container" id="main">
+      <div class="pkmn__list__container">
+          <button id="prevBtn" data-action="prev" class="btn">prev</button>
+          <ul class="pkmn__list" id="pkmnList"></ul>
+          <button id="nextBtn" data-action="next" class="btn">next</button>
+      </div>
+      <p class="pagination">
+        <input id="pagination" type="number" /> of <span id="totalPages"></span>
+      </p>
+      <div class="pkmn__container" id="detail">
+        <img class="loader" src="images/loader.webp" />
+        <div class="pkmn__detail__container">
+            <div class="pkmn__detail__image__container" id="pkmDetailImage">
+            </div>
+            <div class="pkmn__detail__data" id="pkmDetailData">
+            </div>
+        </div>
+      </div>
+  </div>
+  
+  <script src="js/api-handler.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
