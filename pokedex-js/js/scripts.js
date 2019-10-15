@@ -1,13 +1,40 @@
-const pokeDex = (() => {
-    const api = new apiHandler();
 
-    const init = () => {
-        console.log("start");
-    }
+const pagintation = {
+  maxPage: 10,
+  maxPages: 90,
+};
 
-    return {
-        init
-    };
-})();
+const domElemnts = {
+  ulList: document.getElementById('pkmnList'),
 
-pokeDex.init();
+};
+
+const pokemons = {
+  list: [],
+};
+
+let pokemonList;
+let newPokemonList;
+
+const pokeDex = (url = null) => {
+  const api = new apiHandler();
+  api.get(url || 'https://pokeapi.co/api/v2/pokemon/?limit=10')
+  .then((data) => {
+    console.log(data);
+    pokemonList = data.results;
+    console.log(pokemonList);
+    showPkm(pokemonList)
+  });
+
+  const showPkm = (list) => {
+    newPokemonList = list.map((item) => api.get(item.url));
+    console.log(newPokemonList);
+    console.log(newPokemonList[0]);
+    Promise.all(newPokemonList).then((data) => {
+    console.log('data es =', data);
+    })
+  };
+};
+
+
+pokeDex();
